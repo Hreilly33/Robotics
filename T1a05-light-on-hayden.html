@@ -1,0 +1,63 @@
+
+
+
+<input type="button" value="a4-send-0" onClick="{
+    sendToSpark('a4-send-0')
+}">
+
+
+<input type="button" value="a4-send-255" onClick="{
+    sendToSpark('a4-send-255')
+}">
+   
+<input type="button" value="a4-send-280.5" onClick="{
+    sendToSpark('a3-send-280.5')
+}">
+
+<input type="button" value="a4-send-0" onClick="{
+    sendToSpark('a3-send-0')
+}">
+   
+<input type="button" value="d4-read" onClick="{
+    sendToSpark('d4-read')
+}"><br>
+
+<input type="button" value="a5-send-63.75" onClick="{
+    sendToSpark('a4-send-63.75')
+}">   
+
+<input type="button" value="a5-send-90" onClick="{
+    sendToSpark('a4-send-0')
+}">   <br>
+   
+Note: PWM only on A4, A5 presently<br>
+
+<input type="button" value="Check Light" onClick="{
+    sendToSpark('a0-read')
+}">
+
+<input type="button" value="Light On" onClick="{
+    sendToSpark('a0-send-1')
+}">
+
+<input type="button" value="Light Off" onClick="{
+    sendToSpark('a0-send-0')
+}">
+
+<br><br>
+
+
+
+<div width="400" height="200" name="myDivName" id="myDivId"> output here </div><br>
+
+
+<input type=button id="myToVolts" value="Convert Sensor reading into Volts" onclick="{
+  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
+  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
+}">
+: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
+
+
+</font>
+</body>
+</html>
